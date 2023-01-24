@@ -38,6 +38,7 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
+int _putchar(char c);
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
@@ -48,9 +49,9 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 int print_char(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
-		int flags, int width, int precision, int size)
-	int print_percent(va_list types, char buffer[],
-			int flags, int width, int precision, int size);
+		int flags, int width, int precision, int size);
+int print_percent(va_list types, char buffer[], 
+		int flags, int width, int precision, int size);
 
 /* Functions to print numbers */
 int print_int(va_list types, char buffer[],
@@ -100,7 +101,6 @@ int write_num(int ind, char bff[], int flags, int width, int precision,
 		int length, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd, char extra_c, int padd_start);
-
 int write_unsgnd(int is_negative, int ind,
 		char buffer[],
 		int flags, int width, int precision, int size);
