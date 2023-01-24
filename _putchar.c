@@ -1,10 +1,15 @@
-#include <unistd.h>
 #include "main.h"
-/*
- * _putchar:- 'A function to print to the std stream'
- * @c:- element
- * Return: Character
+#include <unistd.h>
+
+/**
+ * _putchar- Entry Point
+ *
+ * Description:- 'Function to print character'
+ * @c:- character element
+ *
+ * Return: Always 0
  */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
